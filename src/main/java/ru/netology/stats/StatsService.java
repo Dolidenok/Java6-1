@@ -44,8 +44,7 @@ public class StatsService {
     }
 
     public long monthsLessThanAverage(long[] purchases) {
-        long sum = calculateSum(purchases);
-        long averageSales = sum / purchases.length;
+        long averageSales = averageMonthlySales(purchases);
         long currentMonthSales;
         long numberOfMonths = 0;
         for (long purchase : purchases) {
@@ -58,8 +57,7 @@ public class StatsService {
     }
 
     public long monthsMoreThanAverage(long[] purchases) {
-        long sum = calculateSum(purchases);
-        long averageSales = sum / purchases.length;
+        long averageSales = averageMonthlySales(purchases);
         long currentMonthSales;
         long numberOfMonths = 0;
         for (long purchase : purchases) {
